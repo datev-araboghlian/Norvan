@@ -1,30 +1,14 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowDown, Play } from 'lucide-react'
 import { COMPANY } from '../lib/content'
 
 export default function Hero() {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -120])
-  const subY = useTransform(scrollYProgress, [0, 1], [0, -60])
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15])
-
   const ease = [0.22, 1, 0.36, 1] as const
 
   return (
-    <section ref={ref} id="top" className="relative min-h-[100svh] overflow-hidden">
+    <section id="top" className="relative min-h-[100svh] overflow-hidden">
       {/* Animated gradient backdrop */}
-      <motion.div
-        style={{ y: bgY, scale }}
-        className="absolute inset-0 -z-10"
-      >
+      <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-norvan-800 via-norvan-900 to-norvan-900" />
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-norvan-accent/20 blur-[140px]" />
         <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[120px]" />
@@ -46,7 +30,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 min-h-[100svh] flex flex-col justify-center pt-28 pb-20">
         <div>
@@ -64,7 +48,6 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            style={{ y: titleY }}
             className="text-[clamp(2.75rem,9vw,7.5rem)] font-extrabold leading-[0.95] tracking-tight text-balance"
           >
             <motion.span
@@ -86,7 +69,6 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            style={{ y: subY }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.4 }}
@@ -125,7 +107,9 @@ export default function Hero() {
       </div>
 
       <motion.div
-        style={{ opacity }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-norvan-400"
       >
         <span className="text-xs uppercase tracking-[0.2em]">Défiler</span>
