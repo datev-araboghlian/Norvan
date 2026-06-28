@@ -19,7 +19,7 @@ export default function Hero() {
   const ease = [0.22, 1, 0.36, 1] as const
 
   return (
-    <section ref={ref} id="top" className="relative min-h-screen overflow-hidden">
+    <section ref={ref} id="top" className="relative min-h-[100svh] overflow-hidden">
       {/* Animated gradient backdrop */}
       <motion.div
         style={{ y: bgY, scale }}
@@ -48,8 +48,8 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 min-h-screen flex flex-col justify-center pt-28 pb-20">
-        <motion.div style={{ opacity }}>
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 min-h-[100svh] flex flex-col justify-center pt-28 pb-20">
+        <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function Hero() {
               Voir sur TikTok
             </a>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       <motion.div
