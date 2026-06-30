@@ -8,3 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 )
+
+// Hide the pre-React loader once the app has mounted.
+document.documentElement.classList.add('app-ready')

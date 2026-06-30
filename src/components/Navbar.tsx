@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { COMPANY, NAV_LINKS } from '../lib/content'
 
@@ -15,11 +14,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+    <header
+      className={`hero-rise fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled ? 'py-3' : 'py-5'
       }`}
     >
@@ -78,16 +74,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden mx-5 mt-2 rounded-2xl glass-dark p-4"
-          >
-            <nav className="flex flex-col gap-1">
+      {open && (
+        <div className="md:hidden mx-5 mt-2 rounded-2xl glass-dark p-4 origin-top animate-[heroRise_0.25s_ease_forwards]">
+          <nav className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
@@ -98,17 +87,16 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="mt-2 px-4 py-3 rounded-xl bg-white text-norvan-900 font-semibold text-center"
-              >
-                Devis gratuit
-              </a>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 px-4 py-3 rounded-xl bg-white text-norvan-900 font-semibold text-center"
+            >
+              Devis gratuit
+            </a>
+          </nav>
+        </div>
+      )}
+    </header>
   )
 }
