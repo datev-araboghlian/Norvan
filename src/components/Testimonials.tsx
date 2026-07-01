@@ -25,7 +25,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="relative p-8 rounded-3xl glass flex flex-col"
+              className="relative p-8 rounded-3xl panel flex flex-col"
             >
               <Quote className="text-norvan-accent/40 mb-5" size={36} />
               <blockquote className="text-lg leading-relaxed text-norvan-100 flex-1">

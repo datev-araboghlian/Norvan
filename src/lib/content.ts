@@ -1,5 +1,11 @@
 import { Building2, Layers, Paintbrush, ShieldCheck, Sparkles, Hammer } from 'lucide-react'
 
+// TODO before launch — everything below is placeholder, not real business data:
+// - COMPANY.phone is a fake number
+// - STATS values (façades réalisées, années, taux de fidélité) are invented
+// - TESTIMONIALS are fabricated, not real client quotes
+// - PROJECTS have no real photos yet (see `image` field, and MediaPlaceholder usages
+//   in SprayReveal/Projects/About) — pull from TikTok @facadenorvan once available
 export const COMPANY = {
   name: 'Norvan',
   tagline: 'Spécialistes du bardage & de la façade',
@@ -79,30 +85,27 @@ export const PROCESS_STEPS = [
   },
 ]
 
+// image: drop a real project photo path here (e.g. from TikTok @facadenorvan) to replace the placeholder frame.
 export const PROJECTS = [
   {
     title: 'Résidence des Berges',
     category: 'Bardage composite',
-    gradient: 'from-blue-500/20 to-cyan-500/10',
-    accent: '#60a5fa',
+    image: '',
   },
   {
     title: 'Loft du Centre',
     category: 'Revêtement de façade',
-    gradient: 'from-amber-500/20 to-orange-500/10',
-    accent: '#f59e0b',
+    image: '',
   },
   {
     title: 'Villa des Hauteurs',
     category: 'Rénovation complète',
-    gradient: 'from-emerald-500/20 to-teal-500/10',
-    accent: '#34d399',
+    image: '',
   },
   {
     title: 'Cour des Érables',
     category: 'Restauration',
-    gradient: 'from-rose-500/20 to-pink-500/10',
-    accent: '#fb7185',
+    image: '',
   },
 ]
 

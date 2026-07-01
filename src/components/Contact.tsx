@@ -38,7 +38,7 @@ export default function Contact() {
 
               <div className="mt-10 space-y-4">
                 <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-4 group">
-                  <span className="grid place-items-center w-12 h-12 rounded-xl glass text-norvan-accentLight group-hover:bg-white/10 transition-colors">
+                  <span className="grid place-items-center w-12 h-12 rounded-xl panel text-norvan-accentLight group-hover:bg-white/10 transition-colors">
                     <Mail size={20} />
                   </span>
                   <span className="text-norvan-200 group-hover:text-white transition-colors">
@@ -46,7 +46,7 @@ export default function Contact() {
                   </span>
                 </a>
                 <a href={`tel:${COMPANY.phone}`} className="flex items-center gap-4 group">
-                  <span className="grid place-items-center w-12 h-12 rounded-xl glass text-norvan-accentLight group-hover:bg-white/10 transition-colors">
+                  <span className="grid place-items-center w-12 h-12 rounded-xl panel text-norvan-accentLight group-hover:bg-white/10 transition-colors">
                     <Phone size={20} />
                   </span>
                   <span className="text-norvan-200 group-hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Contact() {
                   </span>
                 </a>
                 <div className="flex items-center gap-4">
-                  <span className="grid place-items-center w-12 h-12 rounded-xl glass text-norvan-accentLight">
+                  <span className="grid place-items-center w-12 h-12 rounded-xl panel text-norvan-accentLight">
                     <MapPin size={20} />
                   </span>
                   <span className="text-norvan-200">{COMPANY.location}</span>
@@ -67,7 +67,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="h-full min-h-[300px] flex flex-col items-center justify-center text-center glass rounded-3xl p-10"
+                  className="h-full min-h-[300px] flex flex-col items-center justify-center text-center panel rounded-3xl p-10"
                 >
                   <span className="grid place-items-center w-16 h-16 rounded-full bg-norvan-accent/20 text-norvan-accentLight mb-5">
                     <Check size={32} />

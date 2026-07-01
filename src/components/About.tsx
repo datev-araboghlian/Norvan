@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { SectionHeading } from './Section'
+import MediaPlaceholder from './MediaPlaceholder'
 import { STATS } from '../lib/content'
 
 export default function About() {
@@ -49,23 +50,10 @@ export default function About() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative aspect-square rounded-3xl overflow-hidden border border-white/10"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-norvan-accent/30 via-norvan-800 to-norvan-900" />
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(255,255,255,0.1) 28px, rgba(255,255,255,0.1) 29px), repeating-linear-gradient(90deg, transparent, transparent 70px, rgba(255,255,255,0.07) 70px, rgba(255,255,255,0.07) 71px)',
-            }}
+          <MediaPlaceholder
+            alt="L'équipe Norvan sur un chantier"
+            label="Photo d'équipe ou d'atelier à ajouter (TikTok @facadenorvan)"
           />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-3/4 bg-gradient-to-t from-norvan-accent/40 to-transparent rounded-t-2xl" />
-          <div className="absolute inset-0 grid place-items-center">
-            <div className="text-center">
-              <div className="text-6xl font-extrabold gradient-text">N.</div>
-              <p className="mt-2 text-norvan-300 tracking-widest text-sm uppercase">
-                Spécialistes de la façade
-              </p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

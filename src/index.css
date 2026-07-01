@@ -36,6 +36,14 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
+  /* Same look as .glass without backdrop-filter's repaint cost.
+     Use this anywhere the panel repeats (cards, chips) — reserve
+     real .glass for single fixed/sticky elements like the navbar. */
+  .panel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-norvan-100 to-norvan-300;
   }

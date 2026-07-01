@@ -28,7 +28,7 @@ export default function Services() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -6 }}
-                className="group relative p-7 rounded-3xl glass hover:bg-white/[0.07] transition-colors overflow-hidden"
+                className="group relative p-7 rounded-3xl panel hover:bg-white/[0.07] transition-colors overflow-hidden"
               >
                 <div className="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-norvan-accent/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">

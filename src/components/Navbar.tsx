@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import Logo from './Logo'
 import { COMPANY, NAV_LINKS } from '../lib/content'
 
 export default function Navbar() {
@@ -26,17 +27,7 @@ export default function Navbar() {
           }`}
         >
           <a href="#top" className="flex items-center gap-2.5 group">
-            <span className="grid place-items-center w-9 h-9 rounded-xl bg-norvan-accent/15 ring-1 ring-norvan-accent/30">
-              <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
-                <path
-                  d="M16 46V18L32 30L48 18V46"
-                  stroke="#60a5fa"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
+            <Logo />
             <span className="text-lg font-bold tracking-tight">
               {COMPANY.name}
               <span className="text-norvan-accentLight">.</span>

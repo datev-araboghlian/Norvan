@@ -4,8 +4,16 @@ import { PROCESS_STEPS } from '../lib/content'
 
 export default function Process() {
   return (
-    <section id="process" className="relative py-20 sm:py-36 bg-norvan-800/30 border-y border-white/5">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="process" className="relative py-20 sm:py-36 bg-norvan-800/30 border-y border-white/5 overflow-hidden">
+      {/* cladding-seam texture, ties this section to the façade-panel motif used in Projects/About */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(0deg, transparent, transparent 46px, rgba(255,255,255,0.4) 46px, rgba(255,255,255,0.4) 47px)',
+        }}
+      />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Comment ça marche"
           title={
